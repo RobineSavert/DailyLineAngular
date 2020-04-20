@@ -7,7 +7,7 @@ import { SearchComponent } from './search/search.component';
 import { SettingsComponent } from './settings/settings.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'diary', component: DiaryComponent },
   { path: 'lines', loadChildren: './lines/lines.module#LinesModule' },

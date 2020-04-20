@@ -3,8 +3,8 @@
     <img src="../../assets/svg/Logo.svg" class="logo" />
   </a>
   <div class="col-4">
-    <ul class="nav navbar-nav navbar-right">
-      <li *ngIf="isAuthenticated">
+    <ul class="nav navbar-nav navbar-right text-right" *ngIf="isAuthenticated">
+      <li>
         <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
       </li>
       <li>
