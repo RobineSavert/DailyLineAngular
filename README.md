@@ -3,6 +3,19 @@ An Angular application to log your daily lines
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
+## Initial setup
+
+1. Download or clone this repo
+2. Find the environment files in the environments folder (src/environments/*)
+3. Paste the key in both files where it asks for the firebaseAPIKey
+4. Cmd into the root folder and run npm install (or npm i)
+5. You now have a node_modules folder next to your src folder
+6. Run "ng serve" to start the Typescript service and fire up the app
+7. Visit localhost:4200 (or another port if you have specified it)
+8. Create an account & login!
+
+Notes: This app was developed for small screens only, no attention has been payed to bigger resolutions, as it is intented to be an actual app only
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
