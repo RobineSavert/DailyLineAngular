@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
-  links = [
+  LINKS = [
     {"label":"Home","icon":"home","route":"dashboard"},
     {"label":"Diary","icon":"book","route":"diary"},
     {"label":"Lines","icon":"plus","route":"lines"},

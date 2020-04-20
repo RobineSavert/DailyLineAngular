@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataStorageService } from '../shared/data-storage.service';
+import { LineService } from '../lines/line.service';
+import { Line } from '../lines/line.model';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +9,13 @@ import { DataStorageService } from '../shared/data-storage.service';
   styleUrls: [ './dashboard.component.scss' ]
 })
 export class DashboardComponent implements OnInit{
-  constructor(private dataStorageService: DataStorageService) {
-  }
+  constructor(private lineService: LineService) { }
 
   ngOnInit() {
-    this.dataStorageService.fetchLines().subscribe();
+    this.getLines();
+  }
+
+  getLines(): void {
+    this.lineService.getLines();
   }
 }
