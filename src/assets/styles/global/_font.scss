@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/vendor/rfs";
+
+$fs-body: 12px;
+$fs-h1: 18px;
+$fs-h2: 14px;
+$fs-h3: 12px;
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $bridal-white;
+}
+
+h1 {
+  @include rfs($fs-h1);
+  border-bottom: 1px solid $bridal-white;
+}
+
+h2 {
+  @include rfs($fs-h2);
+}
+
+h3 {
+  @include rfs($fs-h3);
+}

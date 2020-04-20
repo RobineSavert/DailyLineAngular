@@ -1,0 +1,11 @@
+@import "src/assets/styles/global/colors";
+
+.navbar {
+  background-color: $rose-gold;
+  z-index: 1000;
+
+  .logo {
+    width: 100px;
+  }
+
+}

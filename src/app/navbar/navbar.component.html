@@ -1,0 +1,10 @@
+<mat-toolbar class="toolbarNav">
+  <mat-list-item
+    *ngFor="let link of LINKS"
+    class="text-center"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    routerLink="/{{ link.route }}"
+  ><i class="fa fa-{{ link.icon }}"></i><p class="small mb-0">{{ link.label }}</p>
+  </mat-list-item>
+</mat-toolbar>

@@ -1,0 +1,22 @@
+@import "src/styles/global/colors";
+
+.dl-mat-select {
+  .mat-select-value,
+  .mat-select-arrow {
+    color: $bridal-white;
+  }
+
+}
+
+.mat-select-panel {
+  background-color: $rose-gold;
+  border-radius: 0 !important;
+  .mat-option,
+  .mat-option.mat-selected:not(.mat-option-disabled){
+    color: $bridal-white;
+  }
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: $bridal-white;
+}

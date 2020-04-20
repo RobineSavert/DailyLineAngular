@@ -1,0 +1,29 @@
+@import "src/assets/styles/global/colors";
+@import "~bootstrap/scss/vendor/rfs";
+
+.toolbarNav{
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  background-color: $rose-gold;
+  border-top: 2px solid $bridal-white;
+  .mat-list-item {
+    line-height: 20px;
+    color: $bridal-white;
+
+    i {
+      @include rfs(20px);
+    }
+
+    small {
+      @include rfs(9px);
+    }
+
+    &.active {
+      color: $nude-blush;
+    }
+  }
+}

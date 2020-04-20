@@ -1,0 +1,18 @@
+.list-group.dl-list-group {
+  border: 1px dashed $bridal-white;
+
+  .list-group-item {
+    background-color: transparent;
+    border-color: $bridal-white;
+    border-style: dashed;
+
+    p,
+    small {
+      color: $bridal-white;
+    }
+
+    p {
+      font-style: italic;
+    }
+  }
+}
