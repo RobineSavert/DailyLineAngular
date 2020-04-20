@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LineService } from '../lines/line.service';
-
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,13 +7,11 @@ import { LineService } from '../lines/line.service';
   styleUrls: [ './dashboard.component.scss' ]
 })
 export class DashboardComponent implements OnInit{
-  constructor(private lineService: LineService) { }
+  constructor(private dataStorageService: DataStorageService) {
+  }
 
   ngOnInit() {
-    this.getLines();
+    this.dataStorageService.fetchLines().subscribe();
   }
 
-  getLines(): void {
-    this.lineService.getLines();
-  }
 }
