@@ -1,0 +1,23 @@
+.search-calendar .mat-calendar {
+  .mat-calendar-body-cell-content,
+  .mat-calendar-table-header,
+  .mat-calendar-body-label {
+    color: $bridal-white;
+  }
+
+  .mat-calendar-table-header-divider::after{
+    background: $nude-blush;
+  }
+
+  .mat-calendar-arrow {
+    border-top-color: $nude-blush;
+  }
+
+  .mat-calendar-body-today:not(.mat-calendar-body-selected){
+    border-color: $nude-blush;
+  }
+
+  .mat-calendar-body-selected {
+    background-color: $cherish;
+  }
+}

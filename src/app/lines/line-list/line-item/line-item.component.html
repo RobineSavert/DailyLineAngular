@@ -5,8 +5,8 @@
     routerLinkActive="active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"> </h5>
-      <small>{{ line.name }}</small>
+      <small>{{ line.date | date: 'dd/MM/yyyy'  }}</small>
     </div>
-    <p class="mb-1">{{ line.description }}</p>
+    <p class="mb-1">{{ line.name }}</p>
   </a>
 </li>

@@ -1,9 +1,9 @@
 export class Line {
   public name: string;
-  public description: string;
+  public date: string;
 
-  constructor(name: string, desc: string) {
+  constructor(name: string, date: string) {
     this.name = name;
-    this.description = desc;
+    this.date = date;
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { LineService } from '../line.service';
 
@@ -13,12 +13,15 @@ export class LineEditComponent implements OnInit {
   id: number;
   editMode = false;
   lineForm: FormGroup;
+  tomorrow = new Date();
 
   constructor(
     private route: ActivatedRoute,
     private lineService: LineService,
     private router: Router
-  ) {}
+  ) {
+    this.tomorrow.setDate(this.tomorrow.getDate());
+  }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
@@ -43,17 +46,17 @@ export class LineEditComponent implements OnInit {
 
   private initForm() {
     let lineName = '';
-    let lineDescription = '';
+    let lineDate = '';
 
     if (this.editMode) {
       const line = this.lineService.getLine(this.id);
       lineName = line.name;
-      lineDescription = line.description;
+      lineDate = line.date;
     }
 
     this.lineForm = new FormGroup({
       name: new FormControl(lineName, Validators.required),
-      description: new FormControl(lineDescription, Validators.required)
+      date: new FormControl(lineDate, Validators.required)
     });
   }
 }

@@ -1,0 +1,18 @@
+.mat-form-field {
+  &.mat-form-field-appearance-legacy {
+
+    .mat-form-field-label {
+      color: $bridal-white;
+    }
+
+    .mat-form-field-underline {
+      background-color: $bridal-white;
+    }
+
+  }
+
+  .mat-datepicker-toggle-default-icon {
+    fill: $bridal-white;
+  }
+}
+

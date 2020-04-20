@@ -11,6 +11,7 @@ import { LineEditComponent } from './line-edit/line-edit.component';
 
 import { LinesRoutingModule } from './lines-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { MatDatepickerModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -24,11 +25,14 @@ import { SharedModule } from '../shared/shared.module';
     exports: [
         LineListComponent
     ],
-    imports: [
-        RouterModule,
-        ReactiveFormsModule,
-        LinesRoutingModule,
-        SharedModule
-    ]
+  imports: [
+    RouterModule,
+    ReactiveFormsModule,
+    LinesRoutingModule,
+    SharedModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatInputModule
+  ]
 })
 export class LinesModule {}

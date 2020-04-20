@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CalendarComponent } from '../shared/calendar/calendar.component';
-import { Moment } from 'moment';
 
 @Component({
   selector: 'app-search',
@@ -8,17 +7,7 @@ import { Moment } from 'moment';
   styleUrls: ['./search.component.scss']
 })
 
-export class SearchComponent implements OnInit {
+export class SearchComponent {
   @ViewChild('lineCalendar', { static: false })
   lineCalendar: CalendarComponent;
-
-  constructor() { }
-
-  ngOnInit() {
-
-  }
-
-  dateSelected(value: Moment) {
-    console.log(value);
-  }
 }
