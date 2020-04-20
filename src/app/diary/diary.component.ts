@@ -1,19 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { LineService } from '../lines/line.service';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-diary',
   templateUrl: './diary.component.html',
   styleUrls: ['./diary.component.scss']
 })
-export class DiaryComponent implements OnInit{
-  constructor(private lineService: LineService) { }
+export class DiaryComponent implements OnInit {
+  constructor(private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
-    this.getLines();
-  }
-
-  getLines(): void {
-    this.lineService.getLines();
+    this.dataStorageService.fetchLines().subscribe();
   }
 }
+
