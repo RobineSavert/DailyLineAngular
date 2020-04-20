@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Line } from '../lines/line.model';
 import { LineService } from '../lines/line.service';
 
 @Component({
@@ -8,9 +6,7 @@ import { LineService } from '../lines/line.service';
   templateUrl: './diary.component.html',
   styleUrls: ['./diary.component.scss']
 })
-export class DiaryComponent implements OnInit {
-  lines: Line[];
-
+export class DiaryComponent implements OnInit{
   constructor(private lineService: LineService) { }
 
   ngOnInit() {
@@ -20,5 +16,4 @@ export class DiaryComponent implements OnInit {
   getLines(): void {
     this.lineService.getLines();
   }
-
 }
