@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Line } from '../lines/line.model';
-import { LineService } from '../lines/line.service';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-diary',
@@ -9,16 +7,10 @@ import { LineService } from '../lines/line.service';
   styleUrls: ['./diary.component.scss']
 })
 export class DiaryComponent implements OnInit {
-  lines: Line[];
-
-  constructor(private lineService: LineService) { }
+  constructor(private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
-    this.getLines();
-  }
-
-  getLines(): void {
-    this.lineService.getLines();
+    this.dataStorageService.fetchLines().subscribe();
   }
 
 }
