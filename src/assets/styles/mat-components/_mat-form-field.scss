@@ -1,7 +1,8 @@
 .mat-form-field {
   &.mat-form-field-appearance-legacy {
 
-    .mat-form-field-label {
+    .mat-form-field-label,
+    .mat-input-element{
       color: $bridal-white;
     }
 

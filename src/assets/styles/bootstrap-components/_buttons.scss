@@ -1,0 +1,54 @@
+@mixin btn($background, $color) {
+  background: $background;
+  color: $color;
+  border-color: $color;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+  margin-right: 5px;
+
+  &:hover,
+  &:focus {
+    background: lighten($background, 10%);
+    color: $color;
+    border-color: $color;
+  }
+
+  &:active {
+    background: lighten($background, 20%);
+    color: $color;
+    border-color: $color;
+  }
+
+  &:focus {
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+  }
+
+  &:disabled,
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active {
+    background: $background;
+    color: $color;
+    border-color: $color;
+
+    &:focus {
+      border-color: $color;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.btn-default,
+.btn-primary {
+  @include btn($berry, $bridal-white);
+}
+
+.btn-success {
+  @include btn($rose-gold, $bridal-white);
+}
+
+.btn-danger {
+  @include btn($rose-gold, $bridal-white);
+}

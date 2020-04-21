@@ -4,8 +4,16 @@
 <br />
 <br />
 
-<h1>{{ line.date }}</h1>
-{{ line.name }}
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">
+      <h1>{{ line.date | date: 'dd/MM/yyyy' }}</h1>
+    </div>
+    {{ line.name }}
+  </div>
+</div>
+
+
 
 <br />
 <br />
