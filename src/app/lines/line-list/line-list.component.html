@@ -1,6 +1,6 @@
 <ul class="list-group dl-list-group">
   <app-line-item
-    *ngFor="let lineEl of lines | slice: 0: limit; let i = index"
+    *ngFor="let lineEl of lines; let i = index"
     [line]="lineEl"
     [index]="i"></app-line-item>
 </ul>

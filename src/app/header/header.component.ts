@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+
 import { DataStorageService } from '../shared/data-storage.service';
 import { AuthService } from '../auth/auth.service';
 
@@ -25,6 +26,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onSaveLines() {
     this.dataStorageService.storeLines();
+  }
+
+  onFetchLines() {
+    this.dataStorageService.fetchLines().subscribe();
   }
 
   onLogout() {

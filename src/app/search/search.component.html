@@ -1,5 +1,4 @@
 <h1>Search</h1>
-
 <div class="search-calendar">
-  <app-calendar #lineCalendar></app-calendar>
+  <app-calendar #lineCalendar (dateSelected)="dateSelected($event)"></app-calendar>
 </div>

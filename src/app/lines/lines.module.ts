@@ -14,17 +14,17 @@ import { SharedModule } from '../shared/shared.module';
 import { MatDatepickerModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
-    declarations: [
-        LinesComponent,
-        LineListComponent,
-        LineDetailComponent,
-        LineItemComponent,
-        LineStartComponent,
-        LineEditComponent
-    ],
-    exports: [
-        LineListComponent
-    ],
+  declarations: [
+      LinesComponent,
+      LineListComponent,
+      LineDetailComponent,
+      LineItemComponent,
+      LineStartComponent,
+      LineEditComponent
+  ],
+  exports: [
+      LineListComponent
+  ],
   imports: [
     RouterModule,
     ReactiveFormsModule,
@@ -36,3 +36,4 @@ import { MatDatepickerModule, MatFormFieldModule, MatInputModule } from '@angula
   ]
 })
 export class LinesModule {}
+

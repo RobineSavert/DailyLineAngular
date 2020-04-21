@@ -18,7 +18,7 @@ import { CoreModule } from './core.module';
 import { MatDatepickerModule, MatToolbarModule, MatListModule, MatNativeDateModule } from '@angular/material';
 
 import { LinesModule } from './lines/lines.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
