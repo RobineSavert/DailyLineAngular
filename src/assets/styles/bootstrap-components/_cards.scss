@@ -1,4 +1,9 @@
 .card {
   background-color: transparent;
   border-color: $bridal-white;
+
+  .card-link {
+    cursor: pointer;
+    color: $cherish;
+  }
 }

@@ -1,19 +1,14 @@
-<a style="cursor: pointer;" class="btn btn-primary" (click)="onEditLine()">Edit Line</a>
-<a style="cursor: pointer;" class="btn btn-danger" (click)="onDeleteLine()">Delete Line</a>
-
-<br />
-<br />
-
 <div class="card">
   <div class="card-body">
-    <div class="card-title">
-      <h1>{{ line.date | date: 'dd/MM/yyyy' }}</h1>
+    <h5 class="card-title">{{ line.date | date: 'dd/MM/yyyy' }}</h5>
+    <p class="card-text">{{ line.name }}</p>
+    <div class="row">
+      <div class="col">
+        <a href="#" class="card-link" (click)="onEditLine()">Edit Line</a>
+      </div>
+      <div class="col text-right">
+        <a href="#" class="card-link" (click)="onDeleteLine()">Delete line</a>
+      </div>
     </div>
-    {{ line.name }}
   </div>
 </div>
-
-
-
-<br />
-<br />
